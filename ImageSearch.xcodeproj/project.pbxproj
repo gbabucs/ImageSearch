@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70976471F215F5F009C15C0 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70976461F215F5F009C15C0 /* ImageViewCell.swift */; };
+		E709764A1F216118009C15C0 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70976491F216118009C15C0 /* ServiceManager.swift */; };
 		E76E60D01F21473300FA6A4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76E60CF1F21473300FA6A4C /* AppDelegate.swift */; };
 		E76E60D21F21473300FA6A4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76E60D11F21473300FA6A4C /* ViewController.swift */; };
 		E76E60D51F21473400FA6A4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76E60D31F21473400FA6A4C /* Main.storyboard */; };
 		E76E60D71F21473400FA6A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E76E60D61F21473400FA6A4C /* Assets.xcassets */; };
 		E76E60DA1F21473400FA6A4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76E60D81F21473400FA6A4C /* LaunchScreen.storyboard */; };
 		E76E60E51F21473400FA6A4C /* ImageSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76E60E41F21473400FA6A4C /* ImageSearchTests.swift */; };
+		E76E60F61F214D2100FA6A4C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76E60F51F214D2100FA6A4C /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E70976461F215F5F009C15C0 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
+		E70976491F216118009C15C0 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		E76E60CC1F21473300FA6A4C /* ImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76E60CF1F21473300FA6A4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E76E60D11F21473300FA6A4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +41,7 @@
 		E76E60E01F21473400FA6A4C /* ImageSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76E60E41F21473400FA6A4C /* ImageSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchTests.swift; sourceTree = "<group>"; };
 		E76E60E61F21473400FA6A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E76E60F51F214D2100FA6A4C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E70976451F215F2A009C15C0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E70976461F215F5F009C15C0 /* ImageViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E70976481F215FF6009C15C0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E70976491F216118009C15C0 /* ServiceManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		E76E60C31F21473300FA6A4C = {
 			isa = PBXGroup;
 			children = (
@@ -77,9 +99,14 @@
 		E76E60CE1F21473300FA6A4C /* ImageSearch */ = {
 			isa = PBXGroup;
 			children = (
+				E70976481F215FF6009C15C0 /* Service */,
+				E70976451F215F2A009C15C0 /* Cell */,
+				E76E60F31F21476E00FA6A4C /* Views */,
+				E76E60F21F21476500FA6A4C /* Storyboard */,
+				E76E60F11F21475700FA6A4C /* DataSource */,
+				E76E60F01F21474C00FA6A4C /* Model */,
+				E76E60EF1F21473A00FA6A4C /* ViewControllers */,
 				E76E60CF1F21473300FA6A4C /* AppDelegate.swift */,
-				E76E60D11F21473300FA6A4C /* ViewController.swift */,
-				E76E60D31F21473400FA6A4C /* Main.storyboard */,
 				E76E60D61F21473400FA6A4C /* Assets.xcassets */,
 				E76E60D81F21473400FA6A4C /* LaunchScreen.storyboard */,
 				E76E60DB1F21473400FA6A4C /* Info.plist */,
@@ -94,6 +121,52 @@
 				E76E60E61F21473400FA6A4C /* Info.plist */,
 			);
 			path = ImageSearchTests;
+			sourceTree = "<group>";
+		};
+		E76E60EF1F21473A00FA6A4C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E76E60D11F21473300FA6A4C /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E76E60F01F21474C00FA6A4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E76E60F51F214D2100FA6A4C /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E76E60F11F21475700FA6A4C /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		E76E60F21F21476500FA6A4C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E76E60D31F21473400FA6A4C /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E76E60F31F21476E00FA6A4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E76E60F41F21477600FA6A4C /* XIBs */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E76E60F41F21477600FA6A4C /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E70976471F215F5F009C15C0 /* ImageViewCell.swift in Sources */,
+				E76E60F61F214D2100FA6A4C /* Photo.swift in Sources */,
 				E76E60D21F21473300FA6A4C /* ViewController.swift in Sources */,
 				E76E60D01F21473300FA6A4C /* AppDelegate.swift in Sources */,
+				E709764A1F216118009C15C0 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +498,7 @@
 				E76E60EB1F21473400FA6A4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E76E60EC1F21473400FA6A4C /* Build configuration list for PBXNativeTarget "ImageSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +507,7 @@
 				E76E60EE1F21473400FA6A4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
